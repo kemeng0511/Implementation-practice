@@ -1,9 +1,11 @@
 # Implementation-practice
 
 ## Opencv Practice
-### 1 and 2: Load single image, video and display them
+### 1, 2, and 3: Load single image, video and display them
 
-### 3: Load a video file and save sequence numbered image files
+<img src="https://user-images.githubusercontent.com/102780764/168073114-06c1e840-d3d1-44de-b8a7-ea60ced869ba.png" width="400px" alt="building"/>
+1st frame of the video:
+<img src="https://user-images.githubusercontent.com/102780764/168078779-4aed10b2-0b2e-4159-9f6e-dd4f008adffb.jpg" width="400px")
 
 ### 4: Load color image and swap RGB channels
 
