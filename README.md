@@ -247,10 +247,18 @@ def load_image(file_name):
 <br>
 
 ### Tutorial 6 : Keyboard and Mouse
+↑ and ↓ control enlarge and shrink, ← and → control left and right rotation.
+[![Youtube]](https://www.youtube.com/watch?v=Usr1HtyStjg "Youtube")
+<br>
 
 ### Tutorial 7 : Model loading
+Find a dataset don't know whether it will be useful in the future: [![stanford-objectnet3d-dataset]](https://cvgl.stanford.edu/projects/objectnet3d/)  
+[![Youtube]](https://www.youtube.com/watch?v=81o28TO-EzM "Youtube")
+<br>
 
 ### Tutorial 8 : Basic shading
+*In python, the shading information is saved in **StandardShading.fragmentshader** and **StandardShading.vertexshader** Using C++ language.*
+[![Youtube]](https://www.youtube.com/watch?v=Xl_-_h4HQhw "Youtube")
 
 <br>
 <br>
