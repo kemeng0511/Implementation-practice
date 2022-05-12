@@ -54,6 +54,42 @@ In this practice, I choose the gaussian white noise mostly used in Image Process
 [![IMAGE ALT TEXT](https://user-images.githubusercontent.com/102780764/168092318-57ad4dd5-dbbd-4010-be62-c8a32fe9ab8d.jpg)](https://www.youtube.com/shorts/r85rYPpTfts "Unity Snake Game")
 
 ### 11: Apply labeling operation to a binarized image
+* Binary image:
+<img src="https://user-images.githubusercontent.com/102780764/168094047-7a68358b-bb84-4334-aa27-0f8cbe094efd.png" width="400px">
+Apply labeling operation:  
+
+```
+num_labels, labels, stats, centroids = cv.connectedComponentsWithStats(binary_im, connectivity=8)
+```  
+
+And we can obtain the label information:  
+
+```
+num_labels =  1728
+stats =  [[     0      0    550    657 172668]
+ [     0      0    550    629 146541]
+ [   148      0      2      1      2]
+ ...
+ [   388    650     14      7     51]
+ [   223    652      3      5     14]
+ [   263    656      1      1      1]]
+centroids =  [[271.93807191 394.54135103]
+ [277.36778785 222.57719   ]
+ [148.5          0.        ]
+ ...
+ [394.17647059 653.68627451]
+ [223.92857143 654.14285714]
+ [263.         656.        ]]
+labels =  [[1 1 1 ... 1 1 1]
+ [1 1 1 ... 1 1 1]
+ [1 1 1 ... 1 1 1]
+ ...
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]]
+```  
+* Labeled image:
+<img src="https://user-images.githubusercontent.com/102780764/168094154-7ea922ef-0949-43c6-bae3-a9a433098afd.png" width="400px">
 
 ### 12, 13 and 14:
 * Do single-camera calibration and get intrinsic & extrinsic parameters
