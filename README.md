@@ -40,16 +40,18 @@ Result:
 
 ### 8 and 9: Add random noise in a grayscale image and Remove the noise
 In this practice, I choose the gaussian white noise mostly used in Image Processing.
-* Noisy Image:  
-<img src="https://user-images.githubusercontent.com/102780764/168087111-3ccebaaa-d14c-4412-900e-bed84592ccc5.png" width="400px">
+>* Noisy Image:  
+><img src="https://user-images.githubusercontent.com/102780764/168087111-3ccebaaa-d14c-4412-900e-bed84592ccc5.png" width="400px">
 
 <br>
 
-* Remove the noise:  
-<img src="https://user-images.githubusercontent.com/102780764/168087679-6c3c1907-6494-40af-8e14-ec011f28237a.png" width="400px">
+>* Remove the noise by **GaussianBlur filter** (Each pixel's new value is set to a weighted average of that pixel's neighborhood. The original pixel's value receives the heaviest weight (having the highest Gaussian value) and neighboring pixels receive smaller weights as their distance to the original pixel increases.):   
+><img src="https://user-images.githubusercontent.com/102780764/168087679-6c3c1907-6494-40af-8e14-ec011f28237a.png" width="400px">
 
 
 ### 10: Binarize a grayscale image. Add track bar GUI to change the threshold
+
+[![IMAGE ALT TEXT]](https://www.youtube.com/shorts/r85rYPpTfts "Unity Snake Game")
 
 ### 11: Apply labeling operation to a binarized image
 
