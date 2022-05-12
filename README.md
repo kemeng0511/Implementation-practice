@@ -280,7 +280,10 @@ The Aruco module in opencv has a total of 25 predefined marker dictionaries. All
 >1) Use the **cv2.aruco.Dictionary_get** function to get the Aruco marker dictionary we are using.
 >2) Use the **cv2.aruco.DetectorParameters_create** function to define the Aruco marker detection parameters.
 >3) Use the **cv2.aruco.detectMarkers** function to detect the Aruco marker.
-<img src="https://user-images.githubusercontent.com/102780764/168119748-d05193ba-2f30-4675-9d4e-7dc1fd7a2d6a.png" width="400px">
+<img src="https://user-images.githubusercontent.com/102780764/168119748-d05193ba-2f30-4675-9d4e-7dc1fd7a2d6a.png" width="600px">
+*Note: Two detailed blogs about it (in Chinese):*
+*[![Blog1]](https://blog.csdn.net/weixin_43229348/article/details/120565635)*
+*[![Blog2]](https://blog.csdn.net/sinat_17456165/article/details/105649131)*
 
 ```	
         # aruco data
