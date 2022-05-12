@@ -51,7 +51,7 @@ In this practice, I choose the gaussian white noise mostly used in Image Process
 
 ### 10: Binarize a grayscale image. Add track bar GUI to change the threshold
 
-[![IMAGE ALT TEXT]](https://www.youtube.com/shorts/r85rYPpTfts "Unity Snake Game")
+[![IMAGE ALT TEXT](https://user-images.githubusercontent.com/102780764/168092318-57ad4dd5-dbbd-4010-be62-c8a32fe9ab8d.jpg)](https://www.youtube.com/shorts/r85rYPpTfts "Unity Snake Game")
 
 ### 11: Apply labeling operation to a binarized image
 
