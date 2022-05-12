@@ -92,9 +92,9 @@ labels =  [[1 1 1 ... 1 1 1]
 <img src="https://user-images.githubusercontent.com/102780764/168094154-7ea922ef-0949-43c6-bae3-a9a433098afd.png" width="400px">
 
 ### 12, 13 and 14:
-* Do single-camera calibration and get intrinsic & extrinsic parameters
-* Display the reprojected points on the captured image based on the estimated parameters in single-camera calibration
-* Obtain the pose of camera and draw object-coordinate system on the observed target
+* __Do single-camera calibration and get intrinsic & extrinsic parameters__
+* __Display the reprojected points on the captured image based on the estimated parameters in single-camera calibration__
+* __Obtain the pose of camera and draw object-coordinate system on the observed target__
 
 In this part, I first simply choose a chessboard (7×7) downloaded from the Internet.
 
@@ -123,10 +123,32 @@ Result:
 
 ### Tutorial 1 : Opening a window
 
+Open a window with size (800×600):
+
+```
+window = glfw.create_window(800, 600, "Test_window", None, None)
+``` 
+
+<img src="https://user-images.githubusercontent.com/102780764/168099686-f1362921-a14f-4cb7-93e7-98dde616c747.png" width="400px">
+
+
 ### Tutorial 2 : The first triangle
+The graphics pipeline can be divided into two large parts: the first transforms your 3D coordinates into 2D coordinates and the second part transforms the 2D coordinates into actual colored pixels.  
+<img src="https://user-images.githubusercontent.com/102780764/168101871-36551226-715e-495a-9bc7-e3bcf5792268.png" width="400px">
+
+Three Axis：x, y-axis are normal, z-axis is perpendicular to the screen, pointing in the direction behind us.
+
+```
+	vertex_data = [-1.0, -1.0, 0.0,
+					1.0, -1.0, 0.0,
+					0.0,  1.0, 0.0]
+``` 
+<img src="https://user-images.githubusercontent.com/102780764/168100125-0b0ca01d-e486-45b0-a042-4174e7fb5ed3.png" width="400px">
 
 
 ### Tutorial 3 : Matrices
+* Drawing a cube requires data from 8 vertices. To draw it， we divide 1 square face into 2 triangles, which is the smallest fragment in OpenGL.
+* The cube has 6 faces. Each face has 2 triangles, i.e., 12 triangles. Each triangle has 3 vertices, so 36 vertices need to be defined.
 
 ### Tutorial 4 : A Colored Cube
 
