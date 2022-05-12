@@ -96,9 +96,22 @@ labels =  [[1 1 1 ... 1 1 1]
 * Display the reprojected points on the captured image based on the estimated parameters in single-camera calibration
 * Obtain the pose of camera and draw object-coordinate system on the observed target
 
+In this part, I first simply choose a chessboard (7×7) downloaded from the Internet.
+
 ```
-Coming soon...
-```
+    # 标定
+    ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
+    print("Camera Matrix : \n") # 内参矩阵
+    print(mtx)
+    print("Distortion Parameters : \n")
+    print(dist)
+    print("Rotation Vectors : \n")
+    print(rvecs)
+    print("Translate Vectors: \n")
+    print(tvecs)
+```  
+Result:  
+<img src="https://user-images.githubusercontent.com/102780764/168097408-d628509f-9449-44ba-b07c-7913b428e112.png" width="400px">
 
 <br>
 <br>
