@@ -258,6 +258,9 @@ Find a dataset don't know whether it will be useful in the future: [![stanford-o
 
 ### Tutorial 8 : Basic shading
 *In python, the shading information is saved in **StandardShading.fragmentshader** and **StandardShading.vertexshader** Using C++ language.*
+* Having highlights when looking in the reflection of a light (specular lighting)
+* Beeing darker when light is not directly towards the model (diffuse lighting)
+* Cheating a lot (ambient lighting)
 [![Youtube]](https://www.youtube.com/watch?v=Xl_-_h4HQhw "Youtube")
 
 <br>
@@ -265,6 +268,30 @@ Find a dataset don't know whether it will be useful in the future: [![stanford-o
 <br>
 
 ## Combination_AR
+* First, use chessboard to calibrate the pc camera, obtain the **Intrinsic-Matrix** and **Distortion-Coefficients** for establishing the world coordinate system.
+* Run **ar_main.py** to draw the box using the classic marker *ArUco*.
+<br>
+
+### Aruco marker
+The Aruco module in opencv has a total of 25 predefined marker dictionaries. All aruco markers in each dictionary contain the same number of blocks or bits (for example, 4 × 4, 5 × 5, 6 × 6 or 7 × 7) , and the number of aruco markers in each dictionary is fixed (e.g. 50, 100, 250 or 1000).  
+<br>
+
+*How to use ArUco? By **cv2.aruco** submodule*
+>1) Use the **cv2.aruco.Dictionary_get** function to get the Aruco marker dictionary we are using.
+>2) Use the **cv2.aruco.DetectorParameters_create** function to define the Aruco marker detection parameters.
+>3) Use the **cv2.aruco.detectMarkers** function to detect the Aruco marker.
+<img src="https://user-images.githubusercontent.com/102780764/168119748-d05193ba-2f30-4675-9d4e-7dc1fd7a2d6a.png" width="400px">
+
+```	
+        # aruco data
+        aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)
+        parameters = aruco.DetectorParameters_create()
+        parameters.adaptiveThreshConstant = True
+
+        height, width, channels = image.shape
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, aruco_dict, parameters=parameters)
+```	
 
 <br>
 <br>
