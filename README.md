@@ -247,21 +247,21 @@ def load_image(file_name):
 <br>
 
 ### Tutorial 6 : Keyboard and Mouse
-↑ and ↓ control enlarge and shrink, ← and → control left and right rotation.
-[![Youtube]](https://www.youtube.com/watch?v=Usr1HtyStjg "Youtube")
+↑ and ↓ control enlarge and shrink, ← and → control left and right rotation.  
+**Result:** [![Youtube]](https://www.youtube.com/watch?v=Usr1HtyStjg "Youtube")
 <br>
 
 ### Tutorial 7 : Model loading
 Find a dataset don't know whether it will be useful in the future: [![stanford-objectnet3d-dataset]](https://cvgl.stanford.edu/projects/objectnet3d/)  
-[![Youtube]](https://www.youtube.com/watch?v=81o28TO-EzM "Youtube")
+**Result:** [![Youtube]](https://www.youtube.com/watch?v=81o28TO-EzM "Youtube")
 <br>
 
 ### Tutorial 8 : Basic shading
 *In python, the shading information is saved in **StandardShading.fragmentshader** and **StandardShading.vertexshader** Using C++ language.*
 * Having highlights when looking in the reflection of a light (specular lighting)
 * Beeing darker when light is not directly towards the model (diffuse lighting)
-* Cheating a lot (ambient lighting)
-[![Youtube]](https://www.youtube.com/watch?v=Xl_-_h4HQhw "Youtube")
+* Cheating a lot (ambient lighting)  
+**Result:** [![Youtube]](https://www.youtube.com/watch?v=Xl_-_h4HQhw "Youtube")
 
 <br>
 <br>
@@ -280,10 +280,11 @@ The Aruco module in opencv has a total of 25 predefined marker dictionaries. All
 >1) Use the **cv2.aruco.Dictionary_get** function to get the Aruco marker dictionary we are using.
 >2) Use the **cv2.aruco.DetectorParameters_create** function to define the Aruco marker detection parameters.
 >3) Use the **cv2.aruco.detectMarkers** function to detect the Aruco marker.
-<img src="https://user-images.githubusercontent.com/102780764/168119748-d05193ba-2f30-4675-9d4e-7dc1fd7a2d6a.png" width="600px">
+<img src="https://user-images.githubusercontent.com/102780764/168119748-d05193ba-2f30-4675-9d4e-7dc1fd7a2d6a.png" width="600px">  
 *Note: Two detailed blogs about it (in Chinese):*
-*[![Blog1]](https://blog.csdn.net/weixin_43229348/article/details/120565635)*
-*[![Blog2]](https://blog.csdn.net/sinat_17456165/article/details/105649131)*
+
+[![Blog1]](https://blog.csdn.net/weixin_43229348/article/details/120565635)  
+[![Blog2]](https://blog.csdn.net/sinat_17456165/article/details/105649131) 
 
 ```	
         # aruco data
@@ -295,6 +296,24 @@ The Aruco module in opencv has a total of 25 predefined marker dictionaries. All
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, aruco_dict, parameters=parameters)
 ```	
+<br>
+
+### Calibration
+* Use the 9×6 chessboard image set for pc_camera calibration  
+**Sample:**  
+<img src="https://user-images.githubusercontent.com/102780764/168122587-dbd7f4dc-b7a6-4b7a-a631-7d560e2a0856.png" width="400px">  
+I use the Ipad to display chessboard on the screen for calibration (totally 20 images in *./ChessBoard*):  
+<img src="https://user-images.githubusercontent.com/102780764/168124786-655fb94a-637f-4a87-b2f7-61521f22551f.jpg" width="400px">  
+
+<br>
+After the calibration, we draw the found corners on the input image using **cv2.drawChessboardCorners** function and save them in **./ChessBoard_Marked**:  
+<img src="https://user-images.githubusercontent.com/102780764/168124745-f04c2dcf-7613-429e-a51f-b86fd4211275.jpg" width="400px">  
+
+
+
+### Result
+[![Youtube]](https://www.youtube.com/watch?v=Xl_-_h4HQhw "Youtube")
+
 
 <br>
 <br>
