@@ -315,8 +315,9 @@ After the calibration, we draw the found corners on the input image using **cv2.
 <br>
 
 ### Result
-[![Youtube]](https://www.youtube.com/watch?v=Xl_-_h4HQhw "Youtube")
-
+I use ipad to display the Aruco marker. It is a little reflective to the natural light (maybe a printed paper works better but I cannot go out because of the covid...)  
+[![Model_video]](https://www.youtube.com/watch?v=aerYY1In6i0 "Youtube")  
+[![Axis_video]](https://www.youtube.com/watch?v=ye6Sy6sJ5hc "Youtube")
 
 <br>
 <br>
